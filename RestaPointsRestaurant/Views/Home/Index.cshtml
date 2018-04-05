@@ -1,0 +1,109 @@
+﻿@model RestaPointsRestaurant.Models.Ravintola
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Profiili</h2>
+            <img src="~/images/dragonsheng.jpg" alt="ASP.NET" class="img-responsive" />  
+        </br>
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nimi)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nimi)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Osoite)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Osoite)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Postinumero)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Postinumero)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Puhelinnumero)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Puhelinnumero)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sahkoposti)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Sahkoposti)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Aukioloajat)
+                </dt>
+                <dd>
+                    @foreach(string aika in Model.Aukioloajat)
+                    {
+                        <h6>@aika</h6>
+                    }
+                </dd>
+            </dl>
+        </div>
+        <a type="button" asp-action="EditProfiili" class="btn btn-info">Muokkaa profiilia</a>
+        </br>
+    </div>
+    <div class="col-md-4">
+        <h2>Ilmoitukset</h2>
+        <div class="alert alert-success">
+            Ilmoituksesi <strong>"Jäännös riisit"</strong> on voimassa vielä 20 päivää!
+            <a>Muokkaa kilpailua</a>
+        </div>
+        <div class="alert alert-success">
+            Kilpailuasi <strong>"Syö kung pao chicken"</strong> on käyty katsomassa <strong>100 </strong>Kertaa!
+            <a>Muokkaa kilpailua</a>
+        </div>
+        <div class="alert alert-info">
+            Kilpailusi <strong>"Kaverin kanssa enemmän"</strong> on saavuttanut tavoitteensa!
+            <a>Muokkaa Kilpailua</a>
+        </div>
+        <div class="alert alert-info">
+            Ilmoituksesi <strong>"Jäännös riisit"</strong> on käyty katsomassa <strong>20</strong> Kertaa!
+            <a>Muokkaa ilmoitusta</a>
+        </div>
+        <div class="alert alert-warning">
+            Ilmoituksesi <strong>"Kiinalaista edullisesti"</strong> on voimassa enää <strong>10</strong> päivää!
+            <a>Muokkaa ilmoitusta</a>
+        </div>
+        <div class="alert alert-danger">
+            Kilpailusi <strong>"Nuudeli perjantai"</strong> on päättynyt!
+            <a>Muokkaa kilpailua</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>Uutiset</h2>
+        <div class="alert alert-info">
+            <h4>Restapoints käyttöohjeet</h4>
+            <ul>- Kuinka lisätä mainos <a>ohje</a></ul>
+            <ul>- Kuinka lisätä kilpailu <a>ohje</a></ul>
+            <ul>- Kuinka muokata profiilia <a>ohje</a></ul>
+            <a>Lue Lisää</a>
+        </div>
+        <div class="alert alert-danger">
+            <h4>Restapoints päivitys</h4>
+            <ul>Päivitämme laitteistoa, katko on ke 04:00- 05:00</ul>
+            <a>Lue Lisää</a>
+        </div>
+        <div class="alert alert-success">
+            <h4>Restapoints uusia ominaisuuksia</h4>
+            <ul>- Uusi käyttöliittymä</ul>
+            <ul>- Uusi toiminto</ul>
+            <ul>- Uusi kilpailumuoto</ul>
+            <ul>- Uusi pistesysteemi</ul>
+            <a>Lue Lisää</a>
+        </div>
+    </div>
+</div>
