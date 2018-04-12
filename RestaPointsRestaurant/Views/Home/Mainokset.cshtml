@@ -1,0 +1,68 @@
+﻿@model IEnumerable<RestaPointsRestaurant.Models.Mainokset>
+@{
+    ViewData["Title"] = "Mainokset";
+}
+</br>
+<h2>Mainokset</h2>
+<p>
+    <a asp-action="UusiMainos">Luo uusi</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kuvat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Selite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlkuAika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoppuAika)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 0;}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (i == 0)
+                    {
+                        <img src="~/images/chinese1.jpg" alt="ASP.NET" class="img-responsive" />
+                    }
+                    else if (i == 1)
+                    {
+                        <img src="~/images/chinese2.png" alt="ASP.NET" class="img-responsive" />
+                    }
+                    @{i++;
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nimi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Selite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlkuAika)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoppuAika)
+                </td>
+                <td>
+                    @Html.ActionLink("Muokkaa", "MuokkaaMainokset", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Tiedot", "TiedotMainokset", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Poista", "PoistaMainokset", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

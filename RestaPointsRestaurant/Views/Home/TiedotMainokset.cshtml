@@ -1,0 +1,45 @@
+﻿@model RestaPointsRestaurant.Models.Mainokset
+
+@{
+    ViewData["Title"] = "Tiedot Mainokset";
+}
+<div>
+    <h4>Mainos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kuvat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kuvat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nimi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nimi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlkuAika)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlkuAika)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoppuAika)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoppuAika)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Muokkaa", "MuokkaaMainokset", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Mainokset">Takaisin listaan</a>
+</div>

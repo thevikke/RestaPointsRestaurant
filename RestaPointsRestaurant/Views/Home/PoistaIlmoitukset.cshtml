@@ -1,0 +1,42 @@
+﻿@model RestaPointsRestaurant.Models.Ilmoitukset
+
+@{
+    ViewData["Title"] = "PoistaIlmoitukset";
+}
+
+<h3>Haluatko varmasti poistaa?</h3>
+<div>
+    <h4>Ilmoitus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Selite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nimi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nimi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlkuAika)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlkuAika)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoppuAika)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoppuAika)
+        </dd>
+    </dl>
+    
+    <form asp-action="PoistaIlmoitukset">
+        <input type="submit" value="Poista" class="btn btn-default" /> |
+        <a asp-action="Ilmoitukset">Takaisin listaan</a>
+    </form>
+</div>

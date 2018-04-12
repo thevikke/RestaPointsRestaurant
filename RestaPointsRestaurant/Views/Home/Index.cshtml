@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-4">
         <h2>Profiili</h2>
-            <img src="~/images/dragonsheng.jpg" alt="ASP.NET" class="img-responsive" />  
+        <img src="~/images/dragonsheng.jpg" alt="ASP.NET" class="img-responsive" />
         </br>
         <div>
             <hr />
@@ -46,7 +46,7 @@
                     @Html.DisplayNameFor(model => model.Aukioloajat)
                 </dt>
                 <dd>
-                    @foreach(string aika in Model.Aukioloajat)
+                    @foreach (string aika in Model.Aukioloajat)
                     {
                         <h6>@aika</h6>
                     }
@@ -84,26 +84,28 @@
         </div>
     </div>
     <div class="col-md-4">
-        <h2>Uutiset</h2>
-        <div class="alert alert-info">
-            <h4>Restapoints käyttöohjeet</h4>
-            <ul>- Kuinka lisätä mainos <a>ohje</a></ul>
-            <ul>- Kuinka lisätä kilpailu <a>ohje</a></ul>
-            <ul>- Kuinka muokata profiilia <a>ohje</a></ul>
-            <a>Lue Lisää</a>
-        </div>
-        <div class="alert alert-danger">
-            <h4>Restapoints päivitys</h4>
-            <ul>Päivitämme laitteistoa, katko on ke 04:00- 05:00</ul>
-            <a>Lue Lisää</a>
-        </div>
-        <div class="alert alert-success">
-            <h4>Restapoints uusia ominaisuuksia</h4>
-            <ul>- Uusi käyttöliittymä</ul>
-            <ul>- Uusi toiminto</ul>
-            <ul>- Uusi kilpailumuoto</ul>
-            <ul>- Uusi pistesysteemi</ul>
-            <a>Lue Lisää</a>
+        <div style="height: 600px; width:400px; overflow: auto;">
+            <h2>Uutiset</h2>
+            <div class="alert alert-info">
+                <h4>Restapoints käyttöohjeet</h4>
+                <ul>- Kuinka lisätä mainos <a>ohje</a></ul>
+                <ul>- Kuinka lisätä kilpailu <a>ohje</a></ul>
+                <ul>- Kuinka muokata profiilia <a>ohje</a></ul>
+                <a>Lue Lisää</a>
+            </div>
+            <div class="alert alert-danger">
+                <h4>Restapoints päivitys</h4>
+                <ul>Päivitämme laitteistoa, katko on ke 04:00- 05:00</ul>
+                <a>Lue Lisää</a>
+            </div>
+            <div class="alert alert-success">
+                <h4>Restapoints uusia ominaisuuksia</h4>
+                <ul>- Uusi käyttöliittymä</ul>
+                <ul>- Uusi toiminto</ul>
+                <ul>- Uusi kilpailumuoto</ul>
+                <ul>- Uusi pistesysteemi</ul>
+                <a>Lue Lisää</a>
+            </div>
         </div>
     </div>
 </div>

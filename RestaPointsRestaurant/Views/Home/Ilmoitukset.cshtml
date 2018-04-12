@@ -1,0 +1,105 @@
+﻿@model IEnumerable<RestaPointsRestaurant.Models.Ilmoitukset>
+
+@{
+    ViewData["Title"] = "Ilmoitukset";
+}
+</br>
+<h2>Ilmoitukset</h2>
+
+<p>
+    <a asp-action="UusiIlmoitus">Luo uusi</a>
+</p>
+<table class="table">
+    <thead>
+        <tr >
+                <th>
+                    @Html.DisplayNameFor(model => model.Selite)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nimi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AlkuAika)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoppuAika)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 0;}
+        @foreach (var item in Model)
+    {
+        if (i == 0)
+    {
+        <tr class="alert alert-success">
+            <td>
+                @Html.DisplayFor(modelItem => item.Selite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlkuAika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoppuAika)
+            </td>
+            <td>
+                @Html.ActionLink("Muokkaa", "MuokkaaIlmoitukset", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Tiedot", "TiedotIlmoitukset", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Poista", "PoistaIlmoitukset", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+        }
+        else if (i == 1)
+        {
+            <tr class="alert alert-info">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Selite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nimi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlkuAika)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoppuAika)
+                </td>
+                <td>
+                    @Html.ActionLink("Muokkaa", "MuokkaaIlmoitukset", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Tiedot", "TiedotIlmoitukset", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Poista", "PoistaIlmoitukset", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+        else
+        {
+            <tr class="alert alert-danger">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Selite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nimi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlkuAika)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoppuAika)
+                </td>
+                <td>
+                    @Html.ActionLink("Muokkaa", "MuokkaaIlmoitukset", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Tiedot", "TiedotIlmoitukset", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Poista", "PoistaIlmoitukset", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+        i++;
+        
+
+}
+    </tbody>
+</table>

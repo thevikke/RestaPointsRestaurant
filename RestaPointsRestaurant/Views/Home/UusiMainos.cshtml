@@ -1,0 +1,51 @@
+﻿@model RestaPointsRestaurant.Models.Mainokset
+
+@{
+    ViewData["Title"] = "Uusi Mainos";
+}
+
+<h4>Mainos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UusiMainos">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Kuvat" class="control-label"></label>
+                <input asp-for="Kuvat" class="form-control" />
+                <span asp-validation-for="Kuvat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nimi" class="control-label"></label>
+                <input asp-for="Nimi" class="form-control" />
+                <span asp-validation-for="Nimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Selite" class="control-label"></label>
+                <input asp-for="Selite" class="form-control" />
+                <span asp-validation-for="Selite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlkuAika" class="control-label"></label>
+                <input asp-for="AlkuAika" class="form-control" />
+                <span asp-validation-for="AlkuAika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoppuAika" class="control-label"></label>
+                <input asp-for="LoppuAika" class="form-control" />
+                <span asp-validation-for="LoppuAika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Mainokset">Takaisin listaan</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
